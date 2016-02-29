@@ -757,7 +757,6 @@ function _init() {
   };
 }(jQuery));
 (function() {
- 	initAdminLTE();
-	//$(document).unbind('page:change', initAdminLTE);
 	$(document).on('page:change', initAdminLTE);
+	$(document).on('page:load', initAdminLTE);
  })(window.jQuery)
