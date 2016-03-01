@@ -758,5 +758,11 @@ function _init() {
 }(jQuery));
 (function() {
 	$(document).on('page:change', initAdminLTE);
-	$(document).on('page:load', initAdminLTE);
+	$(document).on('page:load', function(){
+    //Activate sidebar push menu
+    var o = $.AdminLTE.options;
+    if (o.sidebarPushMenu) {
+      $.AdminLTE.pushMenu.activate(o.sidebarToggleSelector);
+    }
+  });
  })(window.jQuery)
