@@ -593,7 +593,9 @@ function _init() {
  * ------------------
  * All custom plugins are defined below.
  */
-
+('#myModal').on('shown.bs.modal', function () {
+('#myInput').focus()
+})
 /*
  * BOX REFRESH BUTTON
  * ------------------
